@@ -130,6 +130,7 @@ body {
 	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
 	min-height: 43px;
 	background-color: white;
+	z-index:9;
 }
 
 .header>.menubox>.up {
@@ -184,6 +185,7 @@ body {
 	position: fixed;
 	right: 0;
 	top: 80px;
+	z-index: 9;
 }
 
 .controlbox>.up {
@@ -248,6 +250,7 @@ body {
 .eventbox {
 	position: fixed;
 	top: 93px;
+	z-index: 9px;
 }
 
 .eventbox>.eventbtn {
