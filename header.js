@@ -89,6 +89,20 @@ $(function() {
 		}
 	})();//loginstatus
 	(function() {
+		$(".eventbtn").click(function() {
+			var $this = $(this);
+			if ($this.hasClass("close")) {
+				$this.removeClass("close").next().animate({
+					"margin-left":-195
+				});
+			} else {
+				$this.addClass("close").next().animate({
+					"margin-left":35
+				});
+			}
+		});
+	})();//event
+	(function() {
 		initShoppingCart();
 	})();//init
 });

@@ -244,3 +244,26 @@ body {
 	z-index: -1;
 	position: relative;
 }
+
+.eventbox {
+	position: fixed;
+	top: 93px;
+}
+
+.eventbox>.eventbtn {
+	width:116px;
+	height:30px;
+	background-image: url(http://wenchin.imgdns.com/newwebcut/s4-01-1.png);
+	cursor: pointer;
+}
+
+.eventbox>.eventbtn.close {
+	background-image: url(http://wenchin.imgdns.com/newwebcut/s4-01-2.png);
+}
+
+.eventbox>.eventcontent {
+	width: 195px;
+	height: 500px;
+	margin-left: -195px;
+	margin-top: 12px;
+}
