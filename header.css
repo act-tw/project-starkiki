@@ -250,7 +250,7 @@ body {
 .eventbox {
 	position: fixed;
 	top: 93px;
-	z-index: 9px;
+	z-index: 9;
 }
 
 .eventbox>.eventbtn {
@@ -258,6 +258,7 @@ body {
 	height:30px;
 	background-image: url(http://wenchin.imgdns.com/newwebcut/s4-01-1.png);
 	cursor: pointer;
+	z-index: 9;
 }
 
 .eventbox>.eventbtn.close {
