@@ -5,13 +5,14 @@ $(function() {
 				$(".start>img").eq(i).css("z-index", -(i + 1));
 			}
 		}
+
 		function run() {
-			if ($(".start>img:visible").length<=1) {
+			if ($(".start>img:visible").length <= 1) {
 				$(".start>img").eq(0).fadeIn(function() {
 					$(".start>img:hidden").show();
 				});
 			} else {
-				$(".start>img:visible").eq(0).fadeOut();	
+				$(".start>img:visible").eq(0).fadeOut();
 			}
 		}
 		setInterval(run, 3000);
@@ -33,4 +34,42 @@ $(function() {
 			img.src = $(".start>img").attr("src");
 		}).resize();
 	})(); //start
+
+	(function() {
+		var $inbox = $(".index>.outbox>.inbox"),
+			$a = $inbox.find(">a"),
+			$img = $a.find(">img"),
+			img = new Image(),
+			html = "";
+
+		html = "<a href=\"" + $a.first().attr("href") + "\"><img src=\"" + $a.first().find(">img").attr("src") + "\"></a>";
+		$inbox.append(html);
+		$inbox = $(".index>.outbox>.inbox");
+		$a = $inbox.find(">a");
+		$img = $a.find(">img");
+
+		img.onload = function() {
+			var $outbox = $(".index>.outbox"),
+				$inbox = $outbox.find(">.inbox");
+			$outbox.css({
+				"width": img.width,
+				"height": img.height
+			});
+			$inbox.css({
+				"width": img.width * $img.length,
+				"height": img.height
+			});
+
+			function run() {
+				if (parseInt($inbox.css("left")) <= -(img.width * ($img.length - 1))) {
+					$inbox.css("left", 0);
+				}
+				$inbox.animate({
+					"left": "-=" + img.width
+				});
+			}
+			setInterval(run, 3000);
+		}
+		img.src = $img.eq(0).attr("src");
+	})(); //index
 });

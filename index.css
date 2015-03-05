@@ -27,3 +27,17 @@ body {
 .start>img {
 	position: absolute;
 }
+
+.index>.outbox {
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.index>.outbox>.inbox {
+	position: relative;
+}
+
+.index>.outbox>.inbox>a {
+	display: block;
+	float: left;
+}
