@@ -131,6 +131,25 @@ body {
 .footer>.mainbox>.right {
 	width: 453px;
 	height: 157px;
-	background-color: pink;
 	float: left;
+}
+
+.footer>.mainbox>.right>.onlineshop {
+	margin-top: 21px;
+	font-size: 24px;
+	font-family: arial;
+	margin-left: 29px;
+	letter-spacing: 2px;	
+}
+
+.footer>.mainbox>.right>.info {
+	margin-top: 5px;
+	margin-left: 30px;
+	font-family: arial;
+	font-size: 15px;
+	letter-spacing: 3px;
+}
+
+.footer>.mainbox>.right>.info>span {
+	font-weight: bold;
 }
