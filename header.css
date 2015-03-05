@@ -33,6 +33,7 @@ body {
 .header>.mainbox>.linkbox>.up>span {
 	margin: 0 10px;
 	font-size: 12px;
+    color: #808080;
 }
 
 .header>.mainbox>.linkbox>.down {
@@ -153,6 +154,7 @@ body {
 .header>.menubox>.up>span {
 	font-size: 12px;
 	margin: 0 10px;
+    color: #808080;
 }
 
 .header>.menubox>.up>.down {

@@ -153,3 +153,11 @@ body {
 .footer>.mainbox>.right>.info>span {
 	font-weight: bold;
 }
+
+.footer>.copyrightbox {
+	width: 1200px;
+	margin: 10px auto;
+	text-align: center;
+	font-family: arial;
+	font-size: 12px;
+}
