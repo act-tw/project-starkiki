@@ -259,6 +259,9 @@ body {
 	width:116px;
 	height:30px;
 	background-image: url(http://wenchin.imgdns.com/newwebcut/s4-01-1.png);
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: right center;
 	cursor: pointer;
 	z-index: 9;
 }
@@ -269,7 +272,7 @@ body {
 
 .eventbox>.eventcontent {
 	width: 195px;
-	height: 500px;
+	height: 870px;
 	margin-left: -195px;
 	margin-top: 12px;
 }

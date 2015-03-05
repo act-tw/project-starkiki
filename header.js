@@ -92,11 +92,17 @@ $(function() {
 		$(".eventbtn").click(function() {
 			var $this = $(this);
 			if ($this.hasClass("close")) {
-				$this.removeClass("close").next().animate({
+				$this.removeClass("close").animate({
+					"width":116,
+					"height":30
+				}).next().animate({
 					"margin-left":-195
 				});
 			} else {
-				$this.addClass("close").next().animate({
+				$this.addClass("close").animate({
+					"width":236,
+					"height":44
+				}).next().animate({
 					"margin-left":35
 				});
 			}
