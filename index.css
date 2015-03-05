@@ -21,4 +21,9 @@ body {
 	margin-left: -91px;
 	bottom: 55px;
 	cursor: pointer;
+	z-index: 9;
+}
+
+.start>img {
+	position: absolute;
 }
