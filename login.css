@@ -1,0 +1,121 @@
+body {
+	margin:0;
+}
+
+.login {
+	width:1200px;	
+	height:615px;
+	border:1px solid #e2e2e2;
+	margin: 0 auto;
+}
+
+.login>.left {
+	width:599px;
+	height: 615px;
+	float: left;
+}
+
+.login>.left>.logintext {
+	width: 227px;
+	height: 51px;
+	background-image: url(http://wenchin.imgdns.com/newwebcut/s6-01.png);
+	margin-top: 108px;
+	margin-left: 265px;
+	margin-bottom: 46px;
+}
+
+.login>.left>.columns {
+	text-align: right;
+	margin-right: 107px;
+	margin-bottom: 18px;
+}
+
+.login>div>.columns>span,.login>div>.columns>a {
+	font-size: 12px;
+	font-family: arial;
+	margin-right: 2px;
+	color: #808080;
+	text-decoration: none;
+}
+
+.login>div>.columns>input[type='text'],.login>div>.columns>input[type='password'] {
+	width: 225px;
+	margin: 0;
+	height: 18px;
+	border: 1px solid black;
+}
+
+.login>.left>.columns.forget {
+	margin-top: 21px;
+}
+
+.login>.left>.columns.loginbtn {
+	width: 227px;
+	height: 28px;
+	margin-top: 155px;
+	margin-left: 265px;
+	margin-bottom: 0;
+}
+
+.login>.left>.columns.facebookbtn {
+	width: 227px;
+	height: 28px;
+	margin-top: 8px;
+	margin-left: 265px;
+	margin-bottom: 0;
+}
+
+.login>.sp {
+	background-image: url(http://wenchin.imgdns.com/newwebcut/s6-04.png);
+	width: 6px;
+	height: 430px;
+	margin-top: 102px;
+	float: left;
+}
+
+.login>.right {
+	width:595px;
+	height: 615px;
+	float: left;
+}
+
+.login>.right>.joinustext {
+	background-image: url(http://wenchin.imgdns.com/newwebcut/s6-05.png);
+	width: 222px;
+	height: 51px;
+	margin-top: 108px;
+	margin-left: 258px;
+	margin-bottom: 46px;
+}
+
+.login>.right>.columns {
+	text-align: right;
+	margin-right: 109px;
+	margin-bottom: 18px;
+}
+
+.login>.right>.columns>span {
+	margin-right: 3px;
+}
+
+.login>.right>.columns>span.tips {
+	position: absolute;
+	margin-top: 20px;
+	margin-left: -342px;
+	color: #c0c0c0;
+}
+
+.login>.right>.columns.createbtn {
+	width: 227px;
+	height: 28px;
+	margin-top: 36px;
+	margin-left: 259px;
+}
+
+.login>.right>.columns.tips {
+	font-size: 10px;
+	color: #808080;
+	-webkit-transform: scale(0.83);
+	margin-left: 236px;
+	width: 272px;
+}
