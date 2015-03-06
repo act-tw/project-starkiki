@@ -87,7 +87,6 @@ $(function() {
 				var $span = $outbox.find(">.navi>span");
 				$span.filter(".active").removeClass();
 				$span.eq(index).addClass("active");
-				console.log(index);
 			}
 			$outbox.mouseenter(function() {
 				if (sid !== null) {
