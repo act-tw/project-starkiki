@@ -1,21 +1,79 @@
-#userAdmin>.CustomTableStyle {
-	width: 825px;
+#userAdmin {
+    width: 1200px;
+    height: 615px;
+    border: 1px solid #e2e2e2;
+    margin: 0 auto;
+    margin-bottom: 106px;
+    padding-bottom: 60px;
 }
 
-#userAdmin>.CustomTableStyle .CustomTableHeader {
+#userAdmin .CustomTableStyle {
+	width: 825px;
+    margin-top: 70px;
+}
+
+#userAdmin .CustomTableHeader {
 	height: 35px;
 }
 
-#userAdmin>.CustomTableStyle #ctl00_ContentPlaceHolder1_Button1 {
+#userAdmin #ctl00_ContentPlaceHolder1_Button1 {
 	height: 33px;
 	width: 117px;
 	background-image: url(http://wenchin.imgdns.com/newwebcut/s7-01.png);
 	color: transparent;
 	border: 0;
-	margin: 0;
+	margin: 75px 0 40px 0;
 	padding: 0;
 }
 
+#userAdmin #ctl00_ContentPlaceHolder1_ChangePassword1 {
+    border: 0;
+    background-color: transparent;
+}
+
+#userAdmin #ctl00_ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_ChangePasswordPushButton {
+    width: 117px;
+    height: 33px;
+    background-image: url(http://wenchin.imgdns.com/newwebcut/s7-02.png);
+    color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#userAdmin #ctl00_ContentPlaceHolder1_ChangePassword1_ChangePasswordContainerID_CancelPushButton {
+    width: 78px;
+    height: 33px;
+    background-image: url(http://wenchin.imgdns.com/newwebcut/s7-03.png);
+    color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.cartListMain #clItems,.cartListMain #dvStep2_1,.cartListMain #dvStep3_1 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.cartListMain #ctl00_ContentPlaceHolder1_Button1 {
+    width: 200px;
+}
+
+.cartListMain #clTops.step_1+div,.cartListMain #dvStep2_1,.cartListMain #dvStep3_1 {
+    margin-bottom: 70px;
+}
+
+form[action='findorder.aspx'] #content{
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.MsgMain {
+    margin-bottom: 70px;
+}
+ 
 /**********/
 
 
@@ -144,15 +202,17 @@ body {
 	text-align: center;
 }
 
-.header>.menubox.fixed {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
-	min-height: 43px;
-	background-color: white;
-	z-index:9;
+.header > .menubox.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+    min-height: 43px;
+    background-color: white;
+    z-index: 9;
 }
 
 .header>.menubox>.up {

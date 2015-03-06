@@ -115,6 +115,11 @@ $(function() {
 			});
 		});
 	})();//top
+    (function () {
+        if ($("html,body").height() < $(window).height()) {
+            $("#container").css("min-height", $(window).height() - $("#logoBar").height() - $(".DefFont:last").height());
+        }
+    })();//auto footer
 	(function() {
 		initShoppingCart();
 	})();//init
