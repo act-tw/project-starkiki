@@ -1,3 +1,24 @@
+#userAdmin>.CustomTableStyle {
+	width: 825px;
+}
+
+#userAdmin>.CustomTableStyle .CustomTableHeader {
+	height: 35px;
+}
+
+#userAdmin>.CustomTableStyle #ctl00_ContentPlaceHolder1_Button1 {
+	height: 33px;
+	width: 117px;
+	background-image: url(http://wenchin.imgdns.com/newwebcut/s7-01.png);
+	color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/**********/
+
+
 body {
 	margin:0;
 }
