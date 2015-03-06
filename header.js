@@ -109,6 +109,13 @@ $(function() {
 		});
 	})();//event
 	(function() {
+		$(".top").click(function() {
+			$("html,body").animate({
+				"scrollTop":0
+			});
+		});
+	})();//top
+	(function() {
 		initShoppingCart();
 	})();//init
 });

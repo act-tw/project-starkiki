@@ -276,3 +276,14 @@ body {
 	margin-left: -195px;
 	margin-top: 12px;
 }
+
+.top {
+	background-image: url(http://wenchin.imgdns.com/newwebcut/s4-07.png);
+	width: 51px;
+	height: 51px;
+	position: fixed;
+	left: 51px;
+	cursor: pointer;
+	z-index: 10;
+	bottom: 51px;
+}
