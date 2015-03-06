@@ -29,6 +29,7 @@ body {
 }
 
 .index>.outbox {
+	position: relative;
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -40,4 +41,24 @@ body {
 .index>.outbox>.inbox>a {
 	display: block;
 	float: left;
+}
+
+.index>.outbox>.navi {
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	bottom: 30px;
+}
+
+.index>.outbox>.navi>span {
+	width:10px;
+	height:10px;
+	background-color: white;
+	margin: 0 4px;
+	float: left;
+	cursor: pointer;
+}
+
+.index>.outbox>.navi>span.active {
+	background-color: black;
 }
