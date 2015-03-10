@@ -2,15 +2,29 @@ var isLocal = /^file\:\/\/\//i.test(location.href);
 function initShoppingCart() {
     var cartlist = [{"MerNo":"S611040","MerNo1":"611040","MerName":"厚毛料立領小千鳥長版洋裝 / 2色","Color":"01黑","Size":"F","Price":499,"Num":1,"PhotoSmPath":"http://starkiki.s3.amazonaws.com/product/611040/400-001-1.jpg","ColorPhotoPath":"http://starkiki.s3.amazonaws.com/product/611040/01a.jpg"}];
     function getdata(cartlist) {
+        var html = "";
         var count = 0;
         try {
             if (cartlist[0].MerName) {
                 for (var i = 0; i < cartlist.length; i++) {
+                    html += "<table>";
+                    html += "<tr>";
+                    html += "<td><img src=\"" + cartlist[i].PhotoSmPath + "\"></td>";
+                    html += "<td>";
+                    html += "<div>" + cartlist[i].MerNo1 + "</div>";
+                    html += "<div>NT." + cartlist[i].Price + "</div>";
+                    html += "<div>" + cartlist[i].MerName + "&nbsp;/&nbsp;" + cartlist[i].Color + "色</div>";
+                    html += "<div>尺寸：" + cartlist[i].Size + "</div>";
+                    html += "<div>數量：" + cartlist[i].Num + "</div>";
+                    html += "</td>";
+                    html += "</tr>";
+                    html += "</table>";
                     count += cartlist[i].Num;
                 }
             }
         } catch (err) {
         }
+        $(".controlbox>.list>.scrollbox").html(html);
         $(".count").text(count);
     }
     if (isLocal) {
@@ -120,7 +134,31 @@ $(function() {
             $("#container").css("min-height", $(window).height() - $("#logoBar").height() - $(".DefFont:last").height());
         }
     })();//auto footer
-	(function() {
+    (function () {
+        (function () {
+            var html = "";
+            html += "<div class=\"list\">";
+            html += "<div class=\"scrollbox\">";
+            html += "</div>";
+            html += "<div class=\"checkoutbtn\">";
+            html += "<a href=\"../Shop/cartList.aspx\">CHECK IT ! NOW !</a>";
+            html += "</div>";
+            html += "</div>";
+            $(".controlbox").append(html);
+            $(".controlbox>.down,.controlbox>.list").mouseenter(function () {
+                $(".controlbox>.list").show();
+            }).mouseleave(function () {
+                $(".controlbox>.list").hide();
+            });
+        })();//build cart list
+
+        (function () {
+            $("#clItems").on("click", ".btnDel", function() {
+                setTimeout(function() {
+                    initShoppingCart();
+                }, 500);
+            });
+        })(); //delete cart update count
 		initShoppingCart();
 	})();//init
 });
