@@ -122,7 +122,18 @@ $(function() {
 			}
 		});
 	})();//event
-	(function() {
+    (function () {
+        $(document).scroll(function () {
+            if ($(document).scrollTop() > ($(document).height() - $(window).height()) / 2) {
+                if ($(".top").is(":hidden")) {
+                    $(".top").show();
+                }
+            } else {
+                if ($(".top").is(":visible")) {
+                    $(".top").hide();
+                }
+            }
+        });
 		$(".top").click(function() {
 			$("html,body").animate({
 				"scrollTop":0
@@ -161,4 +172,25 @@ $(function() {
         })(); //delete cart update count
 		initShoppingCart();
 	})();//init
+
+    /*201503 appendix menu by WB  Start*/
+    (function () {
+        var url=window.location.toString(),
+            page=url.slice(-2);
+        url.search(/\/Common\/CustomPage\.aspx\?no=\d{2}$/i)!=-1&&(
+            $('#container').prepend(function(){
+                $(this).load("../Common/CustomPage.aspx?no=50 #linkAppendix",function(){
+                    function openMenu(a){
+                        $('#linkAppendix>ol>li').hide(),
+                        a!=undefined&&$('#linkAppendix>ol>li:eq('+a+')').show()
+                    }
+                    (page<=80||page<=89)&&openMenu(3),
+                    (page<=70||page<=79)&&openMenu(2),
+                    (page<=60||page<=69)&&openMenu(1),
+                    (page<=51||page<=59)&&openMenu(0),
+                    page<=49&&openMenu();
+                })
+            }))
+    })();
+    /*201503 appendix menu by WB  End*/
 });
