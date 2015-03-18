@@ -39,21 +39,21 @@ $(function() {
 	(function() {
 		var data = [{"Idno":8,"Name":"線上商品","MouseoverName":"","PhotoPath":"https://s3-ap-northeast-1.amazonaws.com/starkiki/list/item_list.jpg","MainPhoto":"","ShowType":0,"OrderNum":0,"V1":"","SubClass":[{"Idno":45,"Name":"New Arrivals","MouseoverName":"New Arrivals 新品","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[{"Idno":161,"Name":"A/W 03.04","MouseoverName":"A/W 03.04","TopIdno":45,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]}]},{"Idno":66,"Name":"BEST24","MouseoverName":"BEST24 熱銷款","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":68,"Name":"SALE","MouseoverName":"SALE 優惠","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":49,"Name":"ALL ITEM","MouseoverName":"ALL ITEM 全部商品","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":50,"Name":"STARKIKI MADE","MouseoverName":"STARKIKI MADE 設計款","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":51,"Name":"TOP","MouseoverName":"TOP 上身","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[{"Idno":98,"Name":"上衣","MouseoverName":"","TopIdno":51,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":99,"Name":"背心","MouseoverName":"","TopIdno":51,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":100,"Name":"襯衫","MouseoverName":"","TopIdno":51,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]}]},{"Idno":88,"Name":"BOTTOM","MouseoverName":"BOTTOM 下身","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[{"Idno":108,"Name":"裙子","MouseoverName":"","TopIdno":88,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":109,"Name":"褲子","MouseoverName":"","TopIdno":88,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":110,"Name":"內搭褲","MouseoverName":"","TopIdno":88,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]}]},{"Idno":89,"Name":"DRESS","MouseoverName":"DRESS 洋裝","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[{"Idno":101,"Name":"洋裝","MouseoverName":"","TopIdno":89,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":104,"Name":"套裝","MouseoverName":"","TopIdno":89,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]}]},{"Idno":90,"Name":"OUTER","MouseoverName":"OUTER 外套","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[{"Idno":114,"Name":"罩衫","MouseoverName":"","TopIdno":90,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":106,"Name":"外套","MouseoverName":"","TopIdno":90,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":107,"Name":"風衣","MouseoverName":"","TopIdno":90,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]}]},{"Idno":91,"Name":"ACCESSORIES","MouseoverName":"ACCESSORIES 配件","TopIdno":99999,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[{"Idno":111,"Name":"包包","MouseoverName":"","TopIdno":91,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":113,"Name":"飾品","MouseoverName":"","TopIdno":91,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":112,"Name":"鞋子","MouseoverName":"","TopIdno":91,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":147,"Name":"襪子","MouseoverName":"","TopIdno":91,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]},{"Idno":148,"Name":"帽子","MouseoverName":"","TopIdno":91,"Visible":false,"MobileVisibleType":1,"MainIdno":0,"ShowType":0,"V1":"","Level":0,"List":[]}]}]}];
 		function getdata(data) {
-			var html="";
-			for (var i=0,max=data[0].SubClass.length;i<max;i++) {
-				html+="<a href=\"../Shop/itemList.aspx?m=" + data[0].Idno + "&p=" + data[0].SubClass[i].Idno + "\">" + data[0].SubClass[i].Name + "</a>";
-				if (i<max-1) {
-					html+= "<span>|</span>";
-				}
-			}
+		    var html = "";
+		    for (var i = 0, max = data.length; i < max; i++) {
+		        html += "<a href=\"../Shop/itemList.aspx?m=" + data[i].Idno + "\">" + data[i].Name + "</a>";
+		        if (i < max - 1) {
+		            html += "<span>|</span>";
+		        }
+		    }
 			html+="<div class=\"down\"></div>";
 			$(".menubox>.up").html(html).on("mouseenter","a",function() {
 				var index = $(".menubox>.up>a").index(this);
 				var html="";
-				if (data[0].SubClass[index].List.length>0) {
+				if (data[index].SubClass.length > 0) {
 					html+="<span>&gt;</span>";
-					for(var i=0,max=data[0].SubClass[index].List.length;i<max;i++) {
-						html+="<a href=\"../Shop/itemList.aspx?m=" + data[0].Idno + "&p=" + data[0].SubClass[index].List[i].Idno + "\">" + data[0].SubClass[index].List[i].Name + "</a>";
+					for (var i = 0, max = data[index].SubClass.length; i < max; i++) {
+					    html += "<a href=\"../Shop/itemList.aspx?m=" + data[index].Idno + "&p=" + data[index].SubClass[i].Idno + "\">" + data[index].SubClass[i].Name + "</a>";
 					}
 				}
 				$(".menubox>.up>.down").html(html);
@@ -177,20 +177,23 @@ $(function() {
     (function () {
         var url=window.location.toString(),
             page=url.slice(-2);
-        url.search(/\/Common\/CustomPage\.aspx\?no=\d{2}$/i)!=-1&&(
-            $('#container').prepend(function(){
-                $(this).load("../Common/CustomPage.aspx?no=50 #linkAppendix",function(){
+
+        $("#ctl00_ContentPlaceHolder1_customDv").css({"position":"relaitve","paddingTop":"45px"});
+
+        url.search(/\/Common\/CustomPage\.aspx\?no=\d{2}$/i)!=-1&&
+            ($("#content").prepend("<div id='linkAppendix'></div>"),
+            ($('#linkAppendix').load("../Common/CustomPage.aspx?no=50 .appendixBox",function(){
                     function openMenu(a){
-                        $('#linkAppendix>ol>li').hide(),
-                        a!=undefined&&$('#linkAppendix>ol>li:eq('+a+')').show()
-                    }
+                        $("#linkAppendix ol>li").hide(),
+                        a!=undefined&&$("#linkAppendix ol>li:eq("+a+")").fadeIn(200);
+                    };
                     (page<=80||page<=89)&&openMenu(3),
                     (page<=70||page<=79)&&openMenu(2),
                     (page<=60||page<=69)&&openMenu(1),
                     (page<=51||page<=59)&&openMenu(0),
                     page<=49&&openMenu();
-                })
-            }))
+            })));
     })();
     /*201503 appendix menu by WB  End*/
+
 });
